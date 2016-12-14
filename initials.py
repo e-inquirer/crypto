@@ -9,6 +9,8 @@ def get_initials(fullname):
     
     return initials
 
+inputName = input("What is your full name?\n")
+print(get_initials(inputName))
 
 # test stub
 ## uncomment to validate code
