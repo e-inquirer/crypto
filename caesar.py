@@ -109,3 +109,42 @@ def rotate_character(char, rot):
 #testEqual.testEqual(rotate_character('!', 37), '!')
 ### char '6' test #1
 #testEqual.testEqual(rotate_character('6', 13), '6')
+
+
+# encrypt()
+#
+## Main encryption function
+## 
+## Receives two arguments, a string (text) and an integer (rot).
+##
+## Returns the result of rotating each letter in the text by rot
+## places to the right.
+##
+## Non-alphabetic characters (e.g. space, numbers, symbols) are
+## left as is.
+##
+## Calls rotate_character() function.
+#
+def encrypt(text, rot):
+    novusText = ''
+    
+    for i in range(len(text)):
+        novusText += rotate_character(text[i], rot)
+
+    return novusText
+
+
+##test stub
+###uncomment to validate code
+#from testEqual import testEqual
+### test #1
+#testEqual.testEqual(encrypt('a', 13), 'n')
+### test #2
+#testEqual.testEqual(encrypt('abcd', 13), 'nopq')
+### test #3
+#testEqual.testEqual(encrypt('LaunchCode', 13), 'YnhapuPbqr')
+### test #4
+#testEqual.testEqual(encrypt('LaunchCode', 1), 'MbvodiDpef')
+### test #5
+#testEqual.testEqual(encrypt('Hello, World!', 5), 'Mjqqt, Btwqi!')
+
