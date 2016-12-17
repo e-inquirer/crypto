@@ -148,3 +148,12 @@ def encrypt(text, rot):
 ### test #5
 #testEqual.testEqual(encrypt('Hello, World!', 5), 'Mjqqt, Btwqi!')
 
+
+# User input
+usrTXT = input("Type a message: ")
+usrROT = int(input("Rotate by: "))
+
+# Encrypt user input using caesar cipher, then print to STDOUT
+print(encrypt(usrTXT, usrROT))
+
+
