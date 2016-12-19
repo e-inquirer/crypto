@@ -1,7 +1,5 @@
-# import helper functions from ./helpers.py
+#### caesar.py ####
 #
-from helpers import alphabet_position, rotate_character
-
 # encrypt()
 #
 ## Caeser cipher function signature
@@ -16,6 +14,10 @@ from helpers import alphabet_position, rotate_character
 ##
 ## Calls rotate_character() function.
 #
+# Import helper functions from ./helpers.py
+#
+from helpers import alphabet_position, rotate_character
+
 def encrypt(text, rot):
     novusText = ''
     
@@ -59,13 +61,17 @@ def user_input_is_valid(cl_args):
     else:
         return False 
     
-if user_input_is_valid(sys.argv):
-    usrROT = int(sys.argv[1])
-    usrTXT = input("Type a message: ")
+def main():
+    if user_input_is_valid(sys.argv):
+        usrROT = int(sys.argv[1])
+        usrTXT = input("Type a message: ")
 
-# Encrypt user input using caesar cipher, then print to STDOUT
-    print(encrypt(usrTXT, usrROT))
-else:
-    print("usage: python3 caesar.py n")
+        # Encrypt user input using caesar cipher, then print
+        # to STDOUT
+        print(encrypt(usrTXT, usrROT))
+    else:
+        print("usage: python3 caesar.py n")
 
+if __name__ == '__main__':
+    main()
 

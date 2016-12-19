@@ -1,7 +1,5 @@
-# import helper functions from ./helpers.py
+#### vigenere.py ####
 #
-from helpers import alphabet_position, rotate_character
-
 # encrypt()
 #
 ## Vigenere cipher function signature
@@ -17,6 +15,9 @@ from helpers import alphabet_position, rotate_character
 ##
 ## Calls rotate_character() function.
 #
+# import helper functions from ./helpers.py
+from helpers import alphabet_position, rotate_character
+
 def encrypt(text, key):
     novusText = ''
     keyElements = []
@@ -51,12 +52,14 @@ def encrypt(text, key):
 ### test #1
 #testEqual.testEqual(encrypt("The crow flies at midnight!", "boom"), "Uvs osck rmwse bh auebwsih!")
 
+def main():
+    # User input
+    usrTXT = input("Type a message: ")
+    usrKEY = input("Encryption key: ")
 
-# User input
-usrTXT = input("Type a message: ")
-usrKEY = input("Encryption key: ")
+    # Encrypt user input using vigenere cipher, then print to STDOUT
+    print(encrypt(usrTXT, usrKEY))
 
-# Encrypt user input using vigenere cipher, then print to STDOUT
-print(encrypt(usrTXT, usrKEY))
-
+if __name__ == '__main__':
+    main()
 
