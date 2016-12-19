@@ -40,11 +40,24 @@ def encrypt(text, rot):
 #testEqual.testEqual(encrypt('Hello, World!', 5), 'Mjqqt, Btwqi!')
 
 
+## User input
+#usrTXT = input("Type a message: ")
+#usrROT = int(input("Rotate by: "))
+#
+## Encrypt user input using caesar cipher, then print to STDOUT
+#print(encrypt(usrTXT, usrROT))
+
 # User input
+## ROT as cmd-line arg
+#
+import sys
+
+if str.isnumeric(sys.argv[1]):
+    usrROT = int(sys.argv[1])
+else:
+    usrROT = int(input("The rotation value entered is not valid...\nPlease enter a valid rotation value:"))
 usrTXT = input("Type a message: ")
-usrROT = int(input("Rotate by: "))
 
 # Encrypt user input using caesar cipher, then print to STDOUT
 print(encrypt(usrTXT, usrROT))
-
 

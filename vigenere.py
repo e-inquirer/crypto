@@ -45,20 +45,18 @@ def encrypt(text, key):
     return novusText
 
 
+##test stub
+###uncomment to validate code
+#from testEqual import testEqual
+### test #1
+#testEqual.testEqual(encrypt("The crow flies at midnight!", "boom"), "Uvs osck rmwse bh auebwsih!")
 
 
-#test stub
-##uncomment to validate code
-from testEqual import testEqual
-## test #1
-testEqual.testEqual(encrypt("The crow flies at midnight!", "boom"), "Uvs osck rmwse bh auebwsih!")
+# User input
+usrTXT = input("Type a message: ")
+usrKEY = input("Encryption key: ")
 
-
-## User input
-#usrTXT = input("Type a message: ")
-#usrKEY = int(input("Rotate by: "))
-#
-## Encrypt user input using vigenere cipher, then print to STDOUT
-#print(encrypt(usrTXT, usrKEY))
+# Encrypt user input using vigenere cipher, then print to STDOUT
+print(encrypt(usrTXT, usrKEY))
 
 
