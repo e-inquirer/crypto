@@ -49,15 +49,23 @@ def encrypt(text, rot):
 
 # User input
 ## ROT as cmd-line arg
+## Validation
 #
 import sys
 
-if str.isnumeric(sys.argv[1]):
+def user_input_is_valid(cl_args):
+    if (len(cl_args)  > 1) and str.isdigit(cl_args[1]):
+        return True
+    else:
+        return False 
+    
+if user_input_is_valid(sys.argv):
     usrROT = int(sys.argv[1])
-else:
-    usrROT = int(input("The rotation value entered is not valid...\nPlease enter a valid rotation value:"))
-usrTXT = input("Type a message: ")
+    usrTXT = input("Type a message: ")
 
 # Encrypt user input using caesar cipher, then print to STDOUT
-print(encrypt(usrTXT, usrROT))
+    print(encrypt(usrTXT, usrROT))
+else:
+    print("usage: python3 caesar.py n")
+
 

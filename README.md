@@ -3,9 +3,9 @@ Caesar and Vigenère cipher POC implemented in Python 3.5.2
 
 # Background:
 + caeser cipher algorithm is simple to implement, but susceptible to frequency analysis, or brute-force attack at the very least
-	+ vigen[e accente-gue]re is an example of a more complex substitution cipher
-	+ uses multiple shift values rather than one, utilizing a string key rather than a single value
-	+ despite this, it is still susceptible to being broken, if the attacker is aware of the length of the cipher key
+	+ vigenère is an example of a more complex substitution cipher
+		+ uses multiple shift values rather than one, utilizing a string key rather than a single value
+		+ despite this, it is still susceptible to being broken, if the attacker is aware of the length of the cipher key
 		+ the cipher text is simply treated as the product of an interwoven caeser ciphers
 			+ repeated cipher text patterns indicate repeated terms in the unencrypted text message
 	+ whereas caeser cipher presents 25 possibilities to evaluated, vigenere presents [(26^n) - 1], possibilites
